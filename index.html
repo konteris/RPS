@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS</title>
     <link rel="stylesheet" href="styles.css" />
-    <!--<script src ="script.js" defer></script>-->
+    <script src ="script.js" defer></script>
 </head>
 <body>
+    <canvas id="q" width="1360" height="768"></canvas>
     <main>
+        
         <h1 id="title">
             WELCOME TO THE MATRIX
         </h1>
         <div class = "line-1 anim-typewriter">
-             In order to prevail against the machines and destroy<br> THE MATRIX Neo must play and win five rounds' ROCK-PAPER-SCISSORS.
-                Be the Oracle and help him in this very last fight
-                VS Agent Smith.
+            Machines have taken over the world. Be the oracle and help Neo destroy the Matrix.
         </div>
 
-        <button class="matrix-button">Rabbits Hole</button>
+        <!--<button class="matrix-button">Rabbits Hole</button>-->
 
         <div class = "selection-images">
             <div id="rock" class="button">
@@ -36,6 +36,12 @@
         </div>
 
         <div class="rounds-score">
+            <div class="neo">
+                THE ONE <span class="neo score">4</span>
+            </div>
+            <div class="machines">
+                <span class="smith score">3</span> MACHINES
+            </div>
         </div>
     </main>
         <!--
