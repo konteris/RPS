@@ -1,23 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-/* Global */
 html{
   min-height: 100%;
   overflow: hidden;
 }
 body{
-  height: calc(100vh - 8em);
-  /* padding: 4em; */
   color: #00FF00;
   font-family: 'Anonymous Pro', monospace;  
   background-color: rgb(25,25,25);  
   overflow: hidden;
+  margin:0;
 }
 main{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 55px;
     align-items: center;
+    margin-top: 50px;
+    min-height:100%;
+    flex-wrap: nowrap;
 }
 #title{
     font-size:69px;
@@ -25,8 +26,7 @@ main{
     margin-bottom: 0;
 }
 .line-1{
-    max-width:84.5%;
-    overflow-wrap: break-word;
+    max-width:75%;
     border-right: 2px solid rgba(255,255,255,.75);
     font-size: 135%;
     text-align: center;
