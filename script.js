@@ -1,26 +1,33 @@
 function getComputerChoice(){
-    const outcomes = ['Rock', 'Paper', 'Scissors']
+    const outcomes = ['rock', 'paper', 'scissors']
     let randomNum = Math.floor(Math.random()*outcomes.length);
     return(outcomes[randomNum]);
 }
 
+let playerScore = 0, computerScore = 0;
+
 function playRound(playerSelection, computerSelection)
 {
-    let outcome;
+    let player = playerSelection, pc = computerSelection;
     if(player === pc)
-        outcome = 0;
+        return;
     else if((player==="rock" && pc==="scissors")|| (player==="scissors" && pc==="paper")
      || (player==="paper" && pc==="rock"))
-        outcome = 1;
+     {
+        playerScore++;
+        console.log(playerScore);
+     }
     else
-        outcome = -1;
-    return outcome; 
+        computerScore++;
+    document.getElementById('neo').textContent = playerScore;
+    document.getElementById('smith').textContent = computerScore;
+    return
 }
 
 const buttons = document.querySelectorAll('.button');
 buttons.forEach((btn) => {
     btn.addEventListener('click', () =>{
-        console.log(btn.getAttribute('id'));
+        playRound(btn.getAttribute('id'), getComputerChoice());
     })
 })
 
